@@ -1346,7 +1346,7 @@
 
 
     {
-      "DownstreamPathTemplate": "/api/Purchase/GetAll",
+      "DownstreamPathTemplate": "/api/PurchaseOrder/GetAll",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1354,7 +1354,7 @@
           "Port": 6301
         }
       ],
-      "UpstreamPathTemplate": "/Purchase/GetAll",
+      "UpstreamPathTemplate": "/PurchaseOrder/GetAll",
       "UpstreamHttpMethod": [ "GET" ],
       "FileCacheOptions": {
         "TtlSeconds": 60,
@@ -1363,7 +1363,7 @@
       }
     },
     {
-      "DownstreamPathTemplate": "/api/Purchase/GetById/?{Id}=",
+      "DownstreamPathTemplate": "/api/PurchaseOrder/GetById/?{Id}=",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1371,7 +1371,7 @@
           "Port": 6301
         }
       ],
-      "UpstreamPathTemplate": "/Purchase/GetById/?{Id}=",
+      "UpstreamPathTemplate": "/PurchaseOrder/GetById/?{Id}=",
       "UpstreamHttpMethod": [ "GET" ],
       "FileCacheOptions": {
         "TtlSeconds": 60,
@@ -1380,7 +1380,7 @@
       }
     },
     {
-      "DownstreamPathTemplate": "/api/Purchase/Create",
+      "DownstreamPathTemplate": "/api/PurchaseOrder/Create",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1388,7 +1388,7 @@
           "Port": 6301
         }
       ],
-      "UpstreamPathTemplate": "/Purchase/Create",
+      "UpstreamPathTemplate": "/PurchaseOrder/Create",
       "UpstreamHttpMethod": [ "POST" ],
       "FileCacheOptions": {
         "TtlSeconds": 60,
@@ -1397,7 +1397,7 @@
       }
     },
     {
-      "DownstreamPathTemplate": "/api/Purchase/Update",
+      "DownstreamPathTemplate": "/api/PurchaseOrder/Update",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1405,7 +1405,7 @@
           "Port": 6301
         }
       ],
-      "UpstreamPathTemplate": "/Purchase/Update",
+      "UpstreamPathTemplate": "/PurchaseOrder/Update",
       "UpstreamHttpMethod": [ "Put" ],
       "FileCacheOptions": {
         "TtlSeconds": 60,
@@ -1414,7 +1414,7 @@
       }
     },
     {
-      "DownstreamPathTemplate": "/api/Purchase/Delete?Id=",
+      "DownstreamPathTemplate": "/api/PurchaseOrder/Delete?Id=",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1422,7 +1422,187 @@
           "Port": 6301
         }
       ],
-      "UpstreamPathTemplate": "/Purchase/Delete?Id=",
+      "UpstreamPathTemplate": "/PurchaseOrder/Delete?Id=",
+      "UpstreamHttpMethod": [ "Delete" ],
+      "FileCacheOptions": {
+        "TtlSeconds": 60,
+        "Region": "default",
+        "Header": "OC-Caching-Control"
+      }
+    },
+
+    // BillOrder API
+
+
+
+    {
+      "DownstreamPathTemplate": "/api/BillOrder/GetAll",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 6301
+        }
+      ],
+      "UpstreamPathTemplate": "/BillOrder/GetAll",
+      "UpstreamHttpMethod": [ "GET" ],
+      "FileCacheOptions": {
+        "TtlSeconds": 60,
+        "Region": "default",
+        "Header": "OC-Caching-Control"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/BillOrder/GetById/?{Id}=",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 6301
+        }
+      ],
+      "UpstreamPathTemplate": "/BillOrder/GetById/?{Id}=",
+      "UpstreamHttpMethod": [ "GET" ],
+      "FileCacheOptions": {
+        "TtlSeconds": 60,
+        "Region": "default",
+        "Header": "OC-Caching-Control"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/BillOrder/Create",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 6301
+        }
+      ],
+      "UpstreamPathTemplate": "/BillOrder/Create",
+      "UpstreamHttpMethod": [ "POST" ],
+      "FileCacheOptions": {
+        "TtlSeconds": 60,
+        "Region": "default",
+        "Header": "OC-Caching-Control"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/BillOrder/Update",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 6301
+        }
+      ],
+      "UpstreamPathTemplate": "/BillOrder/Update",
+      "UpstreamHttpMethod": [ "Put" ],
+      "FileCacheOptions": {
+        "TtlSeconds": 60,
+        "Region": "default",
+        "Header": "OC-Caching-Control"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/BillOrder/Delete?Id=",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 6301
+        }
+      ],
+      "UpstreamPathTemplate": "/BillOrder/Delete?Id=",
+      "UpstreamHttpMethod": [ "Delete" ],
+      "FileCacheOptions": {
+        "TtlSeconds": 60,
+        "Region": "default",
+        "Header": "OC-Caching-Control"
+      }
+    },
+
+    // VendorCredit API
+
+
+
+    {
+      "DownstreamPathTemplate": "/api/VendorCredit/GetAll",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 6301
+        }
+      ],
+      "UpstreamPathTemplate": "/VendorCredit/GetAll",
+      "UpstreamHttpMethod": [ "GET" ],
+      "FileCacheOptions": {
+        "TtlSeconds": 60,
+        "Region": "default",
+        "Header": "OC-Caching-Control"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/VendorCredit/GetById/?{Id}=",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 6301
+        }
+      ],
+      "UpstreamPathTemplate": "/VendorCredit/GetById/?{Id}=",
+      "UpstreamHttpMethod": [ "GET" ],
+      "FileCacheOptions": {
+        "TtlSeconds": 60,
+        "Region": "default",
+        "Header": "OC-Caching-Control"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/VendorCredit/Create",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 6301
+        }
+      ],
+      "UpstreamPathTemplate": "/VendorCredit/Create",
+      "UpstreamHttpMethod": [ "POST" ],
+      "FileCacheOptions": {
+        "TtlSeconds": 60,
+        "Region": "default",
+        "Header": "OC-Caching-Control"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/VendorCredit/Update",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 6301
+        }
+      ],
+      "UpstreamPathTemplate": "/VendorCredit/Update",
+      "UpstreamHttpMethod": [ "Put" ],
+      "FileCacheOptions": {
+        "TtlSeconds": 60,
+        "Region": "default",
+        "Header": "OC-Caching-Control"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/VendorCredit/Delete?Id=",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 6301
+        }
+      ],
+      "UpstreamPathTemplate": "/VendorCredit/Delete?Id=",
       "UpstreamHttpMethod": [ "Delete" ],
       "FileCacheOptions": {
         "TtlSeconds": 60,
@@ -1522,7 +1702,7 @@
         "Region": "default",
         "Header": "OC-Caching-Control"
       }
-    },
+    }
 
 
 
